@@ -252,7 +252,7 @@ class Environment():
 
         # custom_tf = input("Location of custom tensorflow-gpu wheel (leave "
         #                   "blank to manually install): ")
-		custom_tf = ''
+        custom_tf = ''
         if not custom_tf:
             return
 
@@ -388,7 +388,7 @@ class Checks():
         self.output.info("AMD Support: AMD GPU support is currently limited.\r\n"
                          "Nvidia Users MUST answer 'no' to this option.")
         # i = input("Enable AMD Support? [y/N] ")
-		i = 'N'
+        i = 'N'
         if i in ("Y", "y"):
             self.output.info("AMD Support Enabled")
             self.env.enable_amd = True
@@ -399,7 +399,7 @@ class Checks():
     def docker_ask_enable(self):
         """ Enable or disable Docker """
         # i = input("Enable  Docker? [y/N] ")
-		i = 'N'
+        i = 'N'
         if i in ("Y", "y"):
             self.output.info("Docker Enabled")
             self.env.enable_docker = True
@@ -426,7 +426,7 @@ class Checks():
     def cuda_ask_enable(self):
         """ Enable or disable CUDA """
         # i = input("Enable  CUDA? [Y/n] ")
-		i = 'Y'
+        i = 'Y'
         if i in ("", "Y", "y"):
             self.output.info("CUDA Enabled")
             self.env.enable_cuda = True
@@ -580,7 +580,7 @@ class Install():
     def ask_continue(self):
         """ Ask Continue with Install """
         # inp = input("Please ensure your System Dependencies are met. Continue? [y/N] ")
-		inp = 'y'
+        inp = 'y'
         if inp in ("", "N", "n"):
             self.output.error("Please install system dependencies to continue")
             exit(1)
