@@ -46,7 +46,7 @@ class ScriptExecutor():
     def test_for_tf_version():
         """ Check that the minimum required Tensorflow version is installed """
         min_ver = 1.12
-        max_ver = 1.14
+        max_ver = 3.14
         try:
             # Ensure tensorflow doesn't pin all threads to one core when using tf-mkl
             os.environ["KMP_AFFINITY"] = "disabled"
