@@ -125,6 +125,7 @@ class ScriptExecutor():
         try:
             script = self.import_script()
             process = script(arguments)
+            # print(process)
             process.process()
             success = True
         except FaceswapError as err:
