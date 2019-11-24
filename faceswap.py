@@ -17,6 +17,7 @@ def bad_args(args):
 
 
 if __name__ == "__main__":
+    print("pass")
     PARSER = cli.FullHelpArgumentParser()
     SUBPARSER = PARSER.add_subparsers()
     EXTRACT = cli.ExtractArgs(SUBPARSER,
@@ -33,4 +34,5 @@ if __name__ == "__main__":
                       "Launch the Faceswap Graphical User Interface")
     PARSER.set_defaults(func=bad_args)
     ARGUMENTS = PARSER.parse_args()
+    print("call")
     ARGUMENTS.func(ARGUMENTS)
